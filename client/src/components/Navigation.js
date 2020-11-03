@@ -29,22 +29,68 @@ const Styles = styled.div`
   }
 `;
 
-  function Navigation(){
+  function Navigation(props){
+    const isLoggedIn = localStorage.getItem('USER_ID');
+    const userName = localStorage.getItem('NAME');
     
     return (
-        <Fragment>
-            <Styles>
-            <Navbar expand="lg">
-      <Navbar.Brand href="/">Tutorial</Navbar.Brand>
+    <Fragment>
+      <Styles>
+        <Navbar expand="lg">
+          <Navbar.Brand>
+          {Boolean(isLoggedIn) && (
+            <Nav.Link  href="/home">
+              CodeCamp Community
+            </Nav.Link>
+          )}
+          {!Boolean(isLoggedIn) && (
+            <Nav.Link  to="/login">
+              CodeCamp Community
+            </Nav.Link>
+          )}
+
+          </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-      <Form className="form-center">
-        <FormControl type="text" placeholder="Search" className="" />
-      </Form>
+     
       <Navbar.Collapse id="basic-navbar-nav">
+
+
         <Nav className="ml-auto">
-          <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item> 
-          <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
+
+        {Boolean(isLoggedIn) && (
+                <Fragment>
+                  <Nav.Item><Nav.Link href="/home"> Home</Nav.Link></Nav.Item> 
+                  <Nav.Item><Nav.Link href="/forum">My Post</Nav.Link></Nav.Item> 
+                  
+                  <Nav.Item><Nav.Link href="/create">Create Post</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link href="/about"onClick={() => {
+                    localStorage.setItem('USER_ID', ''); }}>
+                    Log Out
+                    </Nav.Link></Nav.Item>
+                 
+
+
+                
+                 
+                </Fragment>
+              )} {!Boolean(isLoggedIn) && (
+                <Fragment>
+             
+                      <Nav.Item><Nav.Link href="/login">
+                      Log in
+                      </Nav.Link></Nav.Item> 
+                 
+                
+                      <Nav.Item><Nav.Link href="/about">
+                      Sign up
+                      </Nav.Link></Nav.Item>
+                 
+                </Fragment>
+              )}
+          
         </Nav>
+
+        
       </Navbar.Collapse>
     </Navbar>
             </Styles>

@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import SideBar from './components/Sidebar';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -12,6 +14,7 @@ function App() {
 <React.Fragment>
   <Router>
     <Navigation />
+    <SideBar/>
   </Router>
 </React.Fragment>
   );
