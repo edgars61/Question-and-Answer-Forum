@@ -1,72 +1,58 @@
-import React, {Fragment} from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams
-  } from "react-router-dom";
+import React, { Fragment } from "react";
+import { Link, withRouter } from "react-router-dom";
+import styled from 'styled-components'
+
+const Styled= styled.div`
 
 
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
-import styled from 'styled-components';
-const Styles = styled.div`
-  .navbar { background-color: #222; }
-  a, .navbar-nav, .navbar-light .nav-link {
-    color: #9FFFCB;
-    &:hover { color: white; }
-  }
-  .navbar-brand {
-    font-size: 1.4em;
-    color: #9FFFCB;
-    &:hover { color: white; }
-  }
-  .form-center {
-    position: absolute !important;
-    left: 25%;
-    right: 25%;
-  }
-`;
+.navigation { background-color: #222; }
+a, .navbar-nav, .navbar-light .nav-link {
+  color: #9FFFCB;
+  &:hover { color: white; }
+}
+.logo{
+  font-size: 1.4em;
+  color: #9FFFCB;
+  &:hover { color: white; }
+}
 
-  function Navigation(props){
-    const isLoggedIn = localStorage.getItem('USER_ID');
-    const userName = localStorage.getItem('NAME');
-    
-    return (
+
+`
+
+function Navigation(props) {
+  const isLoggedIn = localStorage.getItem('USER_ID');
+  const userName = localStorage.getItem('NAME');
+
+  return (
     <Fragment>
-      <Styles>
-        <Navbar expand="lg">
-          <Navbar.Brand>
+      <Styled>
+      <div className="navigation">
+        <nav className="navbar navbar-dark navbar-expand-lg">
           {Boolean(isLoggedIn) && (
-            <Nav.Link  href="/home">
+            <Link className="navbar-brand logo" to="/home">
               CodeCamp Community
-            </Nav.Link>
+            </Link>
           )}
           {!Boolean(isLoggedIn) && (
-            <Nav.Link  to="/login">
+            <Link className="navbar-brand logo" to="/login">
               CodeCamp Community
-            </Nav.Link>
+            </Link>
           )}
-
-          </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-     
-      <Navbar.Collapse id="basic-navbar-nav">
-
-
-        <Nav className="ml-auto">
-
-        {Boolean(isLoggedIn) && (
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div  className="navbar-nav ml-auto nav">
+              {Boolean(isLoggedIn) && (
                 <Fragment>
-                  <Nav.Item><Nav.Link href="/home"> Home</Nav.Link></Nav.Item> 
-                  <Nav.Item><Nav.Link href="/forum">My Post</Nav.Link></Nav.Item> 
+                  <Link to={"/home"} className="nav-link text-white navi"> Home</Link>
+                  <Link to={"/forum"} className="nav-link text-white navi">My Post</Link>
                   
-                  <Nav.Item><Nav.Link href="/create">Create Post</Nav.Link></Nav.Item>
-                  <Nav.Item><Nav.Link href="/about"onClick={() => {
+                  <Link to={"/create"} className="nav-link text-white navi">Create Post</Link>
+                  <Link className="nav-link text-white navi" to="/login" onClick={() => {
                     localStorage.setItem('USER_ID', ''); }}>
                     Log Out
-                    </Nav.Link></Nav.Item>
+                  </Link>
                  
 
 
@@ -75,28 +61,25 @@ const Styles = styled.div`
                 </Fragment>
               )} {!Boolean(isLoggedIn) && (
                 <Fragment>
-             
-                      <Nav.Item><Nav.Link href="/login">
+                  <li className={`nav-item ${props.location.pathname === "/login" ? "active" : ""}`}>
+                    <Link class="nav-link text-white navi" to="/login">
                       Log in
-                      </Nav.Link></Nav.Item> 
-                 
-                
-                      <Nav.Item><Nav.Link href="/about">
+                    </Link>
+                  </li>
+                  <li class={`nav-item ${props.location.pathname === "/signup" ? "active" : "" }`}>
+                    <Link class="nav-link text-white navi" to="/signup">
                       Sign up
-                      </Nav.Link></Nav.Item>
-                 
+                    </Link>
+                  </li>
                 </Fragment>
               )}
-          
-        </Nav>
+            </div>
+          </div>
+        </nav>
+      </div>
+      </Styled>
+  </Fragment>
+  );
+}
 
-        
-      </Navbar.Collapse>
-    </Navbar>
-            </Styles>
-
-        </Fragment>
-    )
-  };
-
- export default Navigation;
+export default withRouter(Navigation);
