@@ -62,7 +62,13 @@ const SignUp = (props) => {
               <Input />
             </Form.Item>
 
-            <Form.Item label="Lastname" name={['user', 'userLName']} rules={[{ required: true }]} >
+            <Form.Item label="Lastname" name={['user', 'userLName']} rules={[
+                        { required: true, message: 'REQUIRED_ERROR_MESSAGE' },
+                       {
+                        pattern: new RegExp(/.*\?$/),
+                        message: "field does not accept numbers"
+                       }
+                      ]} >
               <Input />
             </Form.Item>
 

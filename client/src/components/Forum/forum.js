@@ -58,6 +58,7 @@ const Forum = (props) => {
 
   const isLoggedIn = localStorage.getItem('USER_ID');
   const myTopic = localStorage.getItem('TOPIC');
+  let myTopicC = myTopic.charAt(0).toUpperCase() + myTopic.slice(1);
   let handled = localStorage.getItem('HANDLED');
   if(localStorage.getItem('HANDLED')=='false'){
     notHandledAction();
@@ -99,7 +100,7 @@ const Forum = (props) => {
 
 
       
-      <h1>{myTopic}</h1>
+      <h1>{myTopicC}</h1>
       <div className="d-flex w-100 flex-column forum-container">
         <h6 className="d-flex justify-content-center">{formMessage}</h6>
         {(forumData || []).map(({ forumsID, forumsDescription, forumsTitle, topic }) => {
