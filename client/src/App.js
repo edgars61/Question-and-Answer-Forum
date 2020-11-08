@@ -5,7 +5,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./App.css";
-//import CreateForum from "./components/Forum/createForum";
+import CreateForum from "./components/Forum/createForum";
 //import Footer from "./components/Footer.js";
 ////import Forum from "./components/Forum/forum";
 import Home from "./components/Home/home";
@@ -43,6 +43,7 @@ function App(props) {
           <Route path="/login" component ={Login} />
           <Route path="/home" component ={Home} />
           <Route path="/signup" component ={SignUp} />
+          <Route path="/create" component ={CreateForum} />
         
       
         </Switch>

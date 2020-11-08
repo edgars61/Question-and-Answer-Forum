@@ -61,11 +61,11 @@ const Home = () => {
      >Programming</Button>
      <Button className="topicButtons" onClick={() => {
                     setHomeState(<Forum/>)
-                    localStorage.setItem('TOPIC', 'gaming');
+                    localStorage.setItem('TOPIC', 'U.S History');
                     localStorage.setItem('HANDLED',false);
                     localStorage.setItem('CHANDLED',false); }}
                
-     >Gaming</Button>
+     >U.S History</Button>
      </div>
      </div>
      <div className="col-xl-10">{homeState}</div>
