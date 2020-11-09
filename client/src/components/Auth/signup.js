@@ -62,9 +62,7 @@ const SignUp = (props) => {
               <Input />
             </Form.Item>
 
-            <Form.Item label="Lastname" name={['user', 'userLName']} rules={[
-                        { required: true, message: 'This field is required' }
-                       >
+            <Form.Item label="Lastname" name={['user', 'userLName']} rules={[{ required: true }]}>
               <Input />
             </Form.Item>
 
