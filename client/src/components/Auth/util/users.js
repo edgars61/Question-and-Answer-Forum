@@ -3,7 +3,7 @@ import axios from 'axios';
 import { SERVER_URL } from '../../../constants';
 
 export const loginUser = (req) => {
-    window.alert(SERVER_URL);
+
   return axios.post(`${SERVER_URL}/user/login`, {
     user: req.user,
   }).then(res => {

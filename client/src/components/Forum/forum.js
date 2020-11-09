@@ -4,10 +4,19 @@ import React, { Fragment, useEffect, useState } from 'react';
 import CreateForum from "./createForum";
 import { deleteForum, getAllForumsByUser } from './util/forums';
 import { Link, withRouter } from "react-router-dom";
-
+import styled from 'styled-components'
 import Comment from './comment';
 import { set } from 'date-fns';
 import comment from './comment';
+
+const Styles = styled.div`
+.newForumButton{
+  margin-top:2%;
+}
+
+
+`;
+
 
 
 
@@ -95,7 +104,8 @@ const Forum = (props) => {
 
   return (
     <Fragment>
-      <Button href="/create">Click here to post a new {myTopic} question</Button>
+      <Styles>
+      <Button variant="outline-primary" className="newForumButton" href="/create">Click here to post a new {myTopic} question</Button>
       
 
 
@@ -116,7 +126,7 @@ const Forum = (props) => {
                   <Col>Forum Description:</Col>
                   <Col className="description">{forumsDescription}</Col>
                 </Row>
-                <Button onClick={() => hello(forumsID)}>{viewCommentsMsg}</Button>
+                <Button variant="outline-primary" className ="viewCommentsButton" onClick={() => hello(forumsID)}>{viewCommentsMsg}</Button>
                 <div>
                   {viewComments}
                 </div>
@@ -126,7 +136,7 @@ const Forum = (props) => {
         })}
         {(forumData || []).length === 0 && <Col className="inform-text">You don't have any post yet</Col>}
       </div>
-   
+      </Styles>
     </Fragment>
     
   );

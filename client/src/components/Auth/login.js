@@ -57,7 +57,7 @@ const Login = (props) => {
     
     try {
       let response = await loginUser(userInfo);
-      window.alert("attempting to login");
+ 
       console.log(response);
       
       if (Boolean(response.isSuccess)) {
