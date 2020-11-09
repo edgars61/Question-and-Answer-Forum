@@ -23,7 +23,7 @@ module.exports = app => {
   //user create a post
   app.post('/user/forums', forums.createForums);
 
-  //display all post created by a specific user
+  //display all post created by topic
   app.get('/forums/user/:topic',forums.displayTopicPost);
 
   //when the user wants to update their post

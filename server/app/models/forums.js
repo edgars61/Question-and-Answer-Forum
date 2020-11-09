@@ -31,7 +31,7 @@ Forums.getAllForums = result => {
     result(null, res);
   });
 };
-
+//Not used
 Forums.getForumsByID = (forumsID, result) => {
   sql.query(`SELECT forums.*, users.* from forums LEFT JOIN users on forums.userID = users.userID WHERE forumsID = ${forumsID}`, (err, res) => {
     if (err) {
@@ -49,18 +49,7 @@ Forums.getForumsByID = (forumsID, result) => {
     result({ kind: 'not_found' }, null);
   });
 };
-/*
-Forums.getPostbyUser = (userID, result) => {
-  sql.query(`SELECT * FROM forums WHERE userID = ${userID} ORDER BY forumsDate DESC`, (err, res) => {
-    if (err) {
-      console.log('error:', err);
-      result(null, err);
-      return;
-    }
-    result(null, res);
-  });
-};
-*/
+
 Forums.updateForumsByID = (forumsID, forums, result) => {
   sql.query(
     'UPDATE forums SET forumsTitle = ?, forumsDescription = ?, forumsDate = ? WHERE forumsID = ?',
