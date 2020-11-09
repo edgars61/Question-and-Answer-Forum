@@ -14,6 +14,15 @@ const Styles = styled.div`
   margin-top:2%;
 }
 
+.viewCommentsButton{
+  margin-top:2%;
+  width: 25%;
+  margin: auto;
+  margin-top: 2%;
+}
+h1{
+  text-align: center;
+}
 
 `;
 
@@ -110,7 +119,7 @@ const Forum = (props) => {
 
 
       
-      <h1>{myTopicC}</h1>
+      <h1 >{myTopicC}</h1>
       <div className="d-flex w-100 flex-column forum-container">
         <h6 className="d-flex justify-content-center">{formMessage}</h6>
         {(forumData || []).map(({ forumsID, forumsDescription, forumsTitle, topic }) => {

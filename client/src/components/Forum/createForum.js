@@ -87,7 +87,7 @@ const CreateForum = (props) => {
               <Input.TextArea rows={10}/>
             </Form.Item>
      
-            <div className="btn-center container-fluid">
+          
 
               <Form.Item >
               
@@ -101,7 +101,7 @@ const CreateForum = (props) => {
                 </Button>
                 
               </Form.Item>
-            </div>
+           
            </Form>
         </div>
       </div>
