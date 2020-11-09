@@ -20,7 +20,7 @@ exports.createForums = (req, res) => {
     topic: req.body.forum.topic
     
   });
-  console.log(forum.topic);
+
   // Save Post in the database
   Forums.create(forum, (err, data) => {
     if (err)
