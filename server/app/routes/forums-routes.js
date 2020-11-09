@@ -28,10 +28,10 @@ module.exports = app => {
 
   //when the user wants to update their post
   app.put('/forums/update/:forumsID', forums.updateForums);
-  
+  /*
   //when the user wants to delete their specific post
   app.delete('/user/forums/:forumsID', forums.deleteForumsByID);
   
   app.delete('/user/forums', forums.deleteAllForums);
-
+*/
 }

@@ -20,7 +20,7 @@ exports.createForums = (req, res) => {
     topic: req.body.forum.topic
     
   });
-
+  console.log(forum.topic);
   // Save Post in the database
   Forums.create(forum, (err, data) => {
     if (err)
@@ -126,7 +126,7 @@ exports.deleteForumsByID = (request, response) => {
     } else response.send({ message: `Post is deleted successfully!` });
   });
 };
-
+/*
 exports.deleteAllForums = (request, response) => {
   Forums.deleteAllForums((err, data) => {
     if (err) {
@@ -140,7 +140,7 @@ exports.deleteAllForums = (request, response) => {
     }
   });
 };
-
+*/
 //Comments controller
 exports.addComment = (request, response) => {
   // Validate request
