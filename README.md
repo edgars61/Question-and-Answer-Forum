@@ -1,5 +1,10 @@
+This is the final capstone project for Texs A&M Web Development Bootcamp
 
-#Database Schema
+This was created using React, Node.js, Express, Bootstrap, React Bootstrap, MySQL, and Ant Design
+
+
+
+Database Schema needed to run project
 
 CREATE TABLE forums (
     forumsID INT NOT NULL AUTO_INCREMENT,
@@ -25,7 +30,7 @@ create TABLE users(
 );
 
 
-create TABLE answers(
+create TABLE comments(
   commentsID INT NOT NULL AUTO_INCREMENT,
   forumsID INT,
   userID INT,
