@@ -6,6 +6,9 @@ import styled from 'styled-components'
 import { loginUser } from './util/users';
 
 const Styles = styled.div`
+.Login{
+  width:50%;
+}
 
 *{
   margin:auto;
@@ -18,6 +21,14 @@ const Styles = styled.div`
   
   background-color:green;
   color:white;
+  width: 25%;
+  margin-top:2%;
+}
+
+@media only screen and (max-width: 600px) {
+  .Login {
+    width:90%;
+  }
 }
 
 
