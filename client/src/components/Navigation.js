@@ -46,18 +46,13 @@ function Navigation(props) {
               {Boolean(isLoggedIn) && (
                 <Fragment>
                   <Link to={"/home"} className="nav-link text-white navi"> Home</Link>
-                  <Link to={"/forum"} className="nav-link text-white navi">My Post</Link>
                   
-                  <Link to={"/create"} className="nav-link text-white navi">Create Post</Link>
+                  
+                  
                   <Link className="nav-link text-white navi" to="/login" onClick={() => {
                     localStorage.setItem('USER_ID', ''); }}>
                     Log Out
                   </Link>
-                 
-
-
-                
-                 
                 </Fragment>
               )} {!Boolean(isLoggedIn) && (
                 <Fragment>
