@@ -14,7 +14,7 @@ export const createForum = (req) => {
     return { data: res.data, isSuccess: res.status === 200 };
   });
 }
-
+/*
 export const deleteForum = (req) => {
   return axios.delete(`${SERVER_URL}/user/forums/${req.forum.forumsID}`).then(res => {
     if (res.status !== 200) {
@@ -36,7 +36,7 @@ export const updateForum = (req) => {
     return { data: res.data, isSuccess: res.status === 200 };
   });
 }
-
+*/
 // Query
 export const getAllForumsByTopic = (req) => {
   return axios.get(`${SERVER_URL}/forums/user/${req.forum.topic}`).then(res => {
@@ -57,7 +57,7 @@ export const getAllForumsByTopic = (req) => {
     return { data: res.data, isSuccess: res.status === 200 };
   });
 }
-*/
+
 export const getForum = (req) => {
   return axios.get(`${SERVER_URL}/forums/${req.forum.forumsID}`).then(res => {
     if (res.status !== 200) {
@@ -77,3 +77,4 @@ export const getAllForums = (req) => {
     return { data: res.data, isSuccess: res.status === 200 };
   });
 }
+*/
