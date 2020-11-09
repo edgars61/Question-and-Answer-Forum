@@ -2,7 +2,7 @@ import { Col, Row, Popconfirm } from 'antd';
 import Button from 'react-bootstrap/Button'
 import React, { Fragment, useEffect, useState } from 'react';
 import CreateForum from "./createForum";
-import { deleteForum, getAllForumsByUser } from './util/forums';
+import { deleteForum, getAllForumsByTopic } from './util/forums';
 import { Link, withRouter } from "react-router-dom";
 import styled from 'styled-components'
 import Comment from './comment';
@@ -61,7 +61,7 @@ const Forum = (props) => {
     setCommentView();
     try {
       
-      let response = await getAllForumsByUser({ forum: { topic: myTopic }});
+      let response = await getAllForumsByTopic({ forum: { topic: myTopic }});
       if (Boolean(response.isSuccess)) {
         setForumData(response.data);
         setFetchingData(false);
@@ -91,7 +91,7 @@ const Forum = (props) => {
       
       try {
         
-        let response = await getAllForumsByUser({ forum: { topic: myTopic }});
+        let response = await getAllForumsByTopic({ forum: { topic: myTopic }});
         if (Boolean(response.isSuccess)) {
           setForumData(response.data);
           setFetchingData(false);
