@@ -64,7 +64,13 @@ const CreateForum = (props) => {
             onFinishFailed={onFinishFailed} validateMessages={validateMessages} >
             <h6 className="d-flex justify-content-center">{formMessage}</h6>
 
-            <Form.Item label="Title" name={['forum', 'forumsTitle']} rules={[{ required: true }]}>
+            <Form.Item label="Title" name={['forum', 'forumsTitle']} rules={[
+                        { required: true},
+                       {
+                        pattern: new RegExp(/.*\?$/),
+                        message: "Question must end with a question mark symbol."
+                       }
+                      ]} >
               <Input />
             </Form.Item>
 
