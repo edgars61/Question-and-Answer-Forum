@@ -93,6 +93,7 @@ const Login = (props) => {
         <ControlLabel>Password</ControlLabel>
         <FormControl
          name="password"
+         type="password"
          
         />
       </FormGroup>
