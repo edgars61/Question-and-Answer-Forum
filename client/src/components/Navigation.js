@@ -30,12 +30,12 @@ function Navigation(props) {
         <nav className="navbar navbar-dark navbar-expand-lg">
           {Boolean(isLoggedIn) && (
             <Link className="navbar-brand logo" to="/home">
-              CodeCamp Community
+              Question and answer pages
             </Link>
           )}
           {!Boolean(isLoggedIn) && (
             <Link className="navbar-brand logo" to="/login">
-              CodeCamp Community
+              Question and answer pages
             </Link>
           )}
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

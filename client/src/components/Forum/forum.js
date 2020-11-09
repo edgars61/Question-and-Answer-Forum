@@ -1,5 +1,5 @@
-import { Col, Row, Popconfirm, Button } from 'antd';
-
+import { Col, Row, Popconfirm } from 'antd';
+import Button from 'react-bootstrap/Button'
 import React, { Fragment, useEffect, useState } from 'react';
 import CreateForum from "./createForum";
 import { deleteForum, getAllForumsByUser } from './util/forums';
@@ -95,7 +95,7 @@ const Forum = (props) => {
 
   return (
     <Fragment>
-      <Button href="/create">Hello world</Button>
+      <Button href="/create">Click here to post a new {myTopic} question</Button>
       
 
 

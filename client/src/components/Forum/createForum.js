@@ -41,7 +41,7 @@ const CreateForum = (props) => {
       if (Boolean(response.isSuccess)) {
         setSubmitting(false);
         setFormMessage('Added a new Forum successfully!');
-        history.push('/forum');
+        history.push('/home');
       } else {
         setSubmitting(false);
         setFormMessage('An error occurred during server process!');
@@ -83,7 +83,7 @@ const CreateForum = (props) => {
                 <Button className="btn-space" loading={isSubmitting} htmlType="submit" >
                   Save
                 </Button>
-                <Button className="btn-space" onClick={() => {history.push('/forum');}} >
+                <Button className="btn-space" onClick={() => {history.push('/home');}} >
                   Cancel
                 </Button>
               </Form.Item>
