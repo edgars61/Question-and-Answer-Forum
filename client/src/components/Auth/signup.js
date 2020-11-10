@@ -3,14 +3,7 @@ import { withRouter } from 'react-router-dom';
 import React, { useState } from 'react';
 
 import { signupUser } from './util/users';
-//
-//const layout = {
- // labelCol: { span: 8 },
- // wrapperCol: { span: 16 },
-//};
-///const tailLayout = {
-  //wrapperCol: { offset: 8, span: 16 },
-//};
+
 
 const validateMessages = {
   required: '${label} is required!',
