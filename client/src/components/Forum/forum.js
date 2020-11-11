@@ -41,10 +41,10 @@ const Forum = (props) => {
   
 
   
-  const hello = (apple) => {
+  const showHideComments = (comments) => {
     if (viewCommentsMsg=='Show Comments'){
       setCommentMsg("Hide Comments");
-      setCommentView(<Comment forumsID={apple} userID={isLoggedIn} />);
+      setCommentView(<Comment forumsID={comments} userID={isLoggedIn} />);
      
     }
     else{
@@ -135,7 +135,7 @@ const Forum = (props) => {
                   <Col>Forum Description:</Col>
                   <Col className="description">{forumsDescription}</Col>
                 </Row>
-                <Button variant="outline-primary" className ="viewCommentsButton" onClick={() => hello(forumsID)}>{viewCommentsMsg}</Button>
+                <Button variant="outline-primary" className ="viewCommentsButton" onClick={() => showHideComments(forumsID)}>{viewCommentsMsg}</Button>
                 <div>
                   {viewComments}
                 </div>
