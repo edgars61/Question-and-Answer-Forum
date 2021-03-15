@@ -1,5 +1,5 @@
 <div>
-  <img src="https://raw.githubusercontent.com/artlaman/chalice-icon-theme/master/assets/harold.jpg" width=61.5%>
+  <img src="https://i.imgur.com/8rIM2Tz.png" width=61.5%>
 </div>
 
 This is the final capstone project for Texs A&M Web Development Bootcamp
