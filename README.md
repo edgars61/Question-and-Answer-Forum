@@ -18,8 +18,8 @@
 
 ### Prerequisites
 
-* Python; [pyenv](https://github.com/pyenv/pyenv) recommended
-* Pip
+* Node >= 10.16
+* npm >= 5.6
 
 ### Installing
 
