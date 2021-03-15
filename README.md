@@ -8,8 +8,8 @@
 
 ## About
 
-> Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
-> At this time, there are no specific vaccines or treatments for COVID-19. The best way to prevent and slow down transmission is be **well informed** about the COVID-19 virus. [who.int](https://www.who.int/health-topics/coronavirus#tab=tab_1)
+> My final project for the Texas A&M University - Kingsville web development bootcamp.
+> This application allows users login or register. Once they do so they are able to post, browse, and comment on forums. 
 
 
 
