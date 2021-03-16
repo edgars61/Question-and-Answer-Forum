@@ -23,7 +23,7 @@
 
 ### Installing
 
-Get the project up and running locally in just 5 easy steps.
+Get the project up and running locally by following the steps below.
 
 1. Create a personal [Fork](https://github.com/edgars61/Question-and-Answer-Forum) of this repository.
 
@@ -33,7 +33,7 @@ Get the project up and running locally in just 5 easy steps.
 git clone https://github.com/edgars61/Question-and-Answer-Forum
 
 
-Question-and-Answer-Forum/
+cd Question-and-Answer-Forum/
 ```
 
 3. Create your virtual environment, and activate it.
