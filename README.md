@@ -105,7 +105,7 @@ module.exports = {
 4. Run local server, and **DONE**!
 
 ```bash
-Open two windows in one navigate to the client folder
+Open two windows navigate to the client folder
 
 npm start
 
@@ -119,19 +119,10 @@ node server.js
 ## Built With
 
 * [Django](https://reactjs.org/) React is an open-source, front end, JavaScript library for building user interfaces or UI components.
-* [Plotly](https://plotly.com/) The leading front-end for ML & data science models in Python, R, and Julia.
-* [Appseed](https://appseed.us/)
+* [Express](https://expressjs.com/)
+* [Ant Design](https://ant.design/)
 * [Bootstrap](https://getbootstrap.com/)
 
-## Data Sources
-
-* Johns Hopkins University: [CSSE](https://systems.jhu.edu/) 2019-ncov data repository, found [here](https://github.com/CSSEGISandData/COVID-19).
-* Our World in Data: [OWID](https://ourworldindata.org/) GitHub Data repository, found [here](https://github.com/owid/covid-19-data/tree/master/public/data).
-* New York Times' COVID GitHub data repository, found [here](https://github.com/nytimes/covid-19-data)
-
-## License
-
-[@MIT](https://github.com/BrianRuizy/covid19-dashboard/blob/master/LICENSE.md)
 
 
 
@@ -143,36 +134,4 @@ node server.js
 
 
 
-CREATE TABLE forums (
-    forumsID INT NOT NULL AUTO_INCREMENT,
-    userID INT,
-    forumsTitle VARCHAR(100),
-    forumsDescription VARCHAR(55),
-    forumsDate DATE,
-    FOREIGN KEY (userID) REFERENCES users(userID)
-    PRIMARY KEY (forumsID)
-   
-    
-);
 
-
-create TABLE users(
-  userID INT NOT NULL AUTO_INCREMENT,
-  userFName VARCHAR(20),
-  userLName VARCHAR(20),
-  userEMail VARCHAR(45),
-  userPassword VARCHAR(45),
-  createdDate DATE,
-  PRIMARY KEY (userID)
-);
-
-
-create TABLE comments(
-  commentsID INT NOT NULL AUTO_INCREMENT,
-  forumsID INT,
-  userID INT,
-  commentsDescription VARCHAR(100),
-  commentsDate DATETIME,
-  PRIMARY KEY (commentsID),
-  FOREIGN KEY (userID) REFERENCES users(userID)
-)
