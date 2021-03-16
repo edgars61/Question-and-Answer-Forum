@@ -118,8 +118,9 @@ node server.js
 
 ## Built With
 
-* [Django](https://reactjs.org/) React is an open-source, front end, JavaScript library for building user interfaces or UI components.
-* [Express](https://expressjs.com/)
+* [React](https://reactjs.org/) React is an open-source, front end, JavaScript library for building user interfaces or UI components.
+* [React](https://nodejs.org/en/) Node is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+* [Expressjs](https://expressjs.com/)
 * [Ant Design](https://ant.design/)
 * [Bootstrap](https://getbootstrap.com/)
 
