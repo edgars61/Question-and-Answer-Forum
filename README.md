@@ -20,6 +20,7 @@
 
 * Node >= 10.16
 * npm >= 5.6
+* MySQL >= 8.0.23 
 
 ### Installing
 
