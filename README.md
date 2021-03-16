@@ -25,20 +25,15 @@
 
 Get the project up and running locally in just 5 easy steps.
 
-1. Create a personal [Fork](https://github.com/login?return_to=%2FBrianRuizy%2Fcovid19-dashboard) of this repository.
+1. Create a personal [Fork](https://github.com/edgars61/Question-and-Answer-Forum) of this repository.
 
 2. **Clone** the fork with HTTPS, using your local terminal to a preferred location, and **cd** into the project.
 
 ```bash
-git clone https://github.com/your_username/covid19-dashboard.git
+git clone https://github.com/edgars61/Question-and-Answer-Forum
 
-Cloning into 'covid19-dashboard'...
-remote: Enumerating objects: 113, done.
-remote: Counting objects: 100% (113/113), done.
-remote: Compressing objects: 100% (80/80), done.
-Receiving objects: 100% (2845/2845), 12.52 MiB | 5.21 MiB/s, done.
 
-cd covid19-dashboard/
+Question-and-Answer-Forum/
 ```
 
 3. Create your virtual environment, and activate it.
