@@ -32,6 +32,16 @@ Get the project up and running locally by following the steps below.
 ```bash
 git clone https://github.com/edgars61/Question-and-Answer-Forum
 
+Cloning into 'Question-and-Answer-Forum'...
+remote: Enumerating objects: 9541, done.
+remote: Counting objects: 100% (9541/9541), done.
+remote: Compressing objects: 100% (6763/6763), done.
+remote: Total 9541 (delta 2308), reused 9365 (delta 2148), pack-reused 0
+Receiving objects: 100% (9541/9541), 10.28 MiB | 12.60 MiB/s, done.
+Resolving deltas: 100% (2308/2308), done.
+Checking out files: 100% (8944/8944), done.
+
+
 
 cd Question-and-Answer-Forum/
 ```
