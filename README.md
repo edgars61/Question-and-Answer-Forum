@@ -45,20 +45,15 @@ Checking out files: 100% (8944/8944), done.
 
 cd Question-and-Answer-Forum/
 ```
-
-3. Create your virtual environment, and activate it.
-
-```bash
-python -m venv env
-
-source env/bin/activate  # Linux/Mac
-env/Scripts/activate  # Windows
-```
-
-4. Install dependencies
+3. Install dependencies
 
 ```bash
-pip install -r requirements.txt
+cd client
+npm install
+
+cd ..
+cd server
+npm install
 ```
 
 5. Run local server, and **DONE**!
